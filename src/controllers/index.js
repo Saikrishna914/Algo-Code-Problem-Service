@@ -1,3 +1,3 @@
 module.exports = {
-    problemController : require('./problem.controller')
+    problemController: require('./problem.controller')
 }
