@@ -31,7 +31,7 @@ class ProblemRepository  {
     async getproblem(id){
         try {
             const problem = await Problem.findById(id);
-            logger.error(`Problem with id : ${id} not found`);
+            // logger.error(`Problem with id : ${id} not found`);
             if(!problem){
                 throw new NotFound("problem", id);
             }
@@ -46,7 +46,7 @@ class ProblemRepository  {
         try {
              const deletedproblem = await Problem.findByIdAndDelete(id);
              if(!deletedproblem){
-                logger.error(`Problem with id : ${id} not found`);
+                logger.error(`Problem.Repository : Problem with id : ${id} not found`);
                 throw new NotFound("problem", id);
              }
              return deletedproblem;
